@@ -3,6 +3,7 @@
   <head>
     <script>
       function submitRequest() {
+        // If you remove the setTimeout, the request will work in Chromium
         setTimeout(
           () =>
             fetch("/login", {
