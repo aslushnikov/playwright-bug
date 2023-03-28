@@ -2,7 +2,8 @@
 <html>
   <head>
     <script>
-      function submitRequest() {
+      function submitRequest(event) {
+        event.preventDefault();
         // If you remove the setTimeout, the request will work in Chromium
         setTimeout(
           () =>
@@ -23,7 +24,7 @@
   </head>
   <body>
     <!--This will break Chromium-->
-    <form onsubmit="submitRequest()">
+    <form onsubmit="submitRequest(event)">
       <button data-pw="login-button" type="submit">Click me</button>
     </form>
 
